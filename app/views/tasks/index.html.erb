@@ -1,5 +1,6 @@
 <h1>My tasks</h1>
 <% @tasks.each do |tasks| %>
   <h2><%= link_to tasks.title, show_task_path(tasks)  %></h2>
+  <%= link_to "Borrar tarea", task_path(@task), method: :delete  %>
 <% end %>
 <%= link_to "Add new task", new_task_path  %>

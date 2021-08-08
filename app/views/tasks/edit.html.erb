@@ -1,14 +1,13 @@
-<form action="/tasks" method="post">
+<%= form_for @task do |f| %>
+  <%= f.label :title, "Ingrese tarea" %>
+  <%= f.text_field :title %>
 
-  <label for="name">Ingrese tarea</label>
-  <input type="text" name="task[title]" placeholder="Nombre">
+  <%= f.label :details, "Ingrese detalles" %>
+  <%= f.text_field :details %>
 
-  <label for="name">Ingrese detalles</label>
-  <input type="text" name="task[details]" placeholder="Detalles">
+  <%= f.label :completed, "Ingrese estado" %>
+  <%= f.text_field :completed %>
 
-  <label for="name">Ingrese estado</label>
-  <input type="boolean" name="task[completed]" placeholder="Estado">
+  <%= f.submit %>
 
-  <input type="submit">
-
-</form>
+<% end %>
